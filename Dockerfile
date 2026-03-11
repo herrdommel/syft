@@ -1,4 +1,4 @@
-FROM alpine:3.20
+FROM alpine:3.23
 
 ARG SYFT_VERSION=1.42.2
 ARG TARGETARCH=amd64
@@ -26,6 +26,3 @@ RUN set -eux; \
 
 LABEL org.opencontainers.image.title="syft" \
       org.opencontainers.image.description="Container image with Syft installed"
-
-ENTRYPOINT ["syft"]
-CMD ["--help"]
